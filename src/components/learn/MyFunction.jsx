@@ -1,8 +1,16 @@
+import './style.css'
+
 const MyFunction = () => {
   return (
-    <div>
-      <p>Nguyen Hng Sn update</p>
-    </div>
+    <>
+      <div>Nguyen Hng Sn update</div>
+      <div className='date' 
+        style={
+          {fontSize : "20px"}
+        } 
+      >09-08-2004</div>
+    </>
+    
   )
 }
 
