@@ -2,14 +2,10 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import MyFunction from './components/learn/MyFunction'
+import {SecondComponent, ThirdComponent} from './components/learn/SecondComponents'
 
-const MyFunction = () => {
-  return (
-    <div>
-      <p>Nguyen Hng Sn update</p>
-    </div>
-  )
-}
+
 
 const App = () => {
   const [count, setCount] = useState(0)
@@ -26,6 +22,8 @@ const App = () => {
       </div>
       <h1>Hello world & Hong Son</h1>
       <MyFunction/>
+      <SecondComponent/>
+      <ThirdComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
