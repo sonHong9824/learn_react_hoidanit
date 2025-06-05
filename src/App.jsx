@@ -2,6 +2,7 @@ import './components/todo/todo.css'
 import TodoData from './components/todo/TodoData'
 import TodoNew from './components/todo/TodoNew'
 import Logo from './assets/react.svg'
+import { useState } from 'react'
 
 const App = () => {
 
@@ -12,6 +13,11 @@ const App = () => {
     country: "Việt nam",
     job: "student"
   }
+
+  const [todoList, setTodoList] = useState([
+    {id: 1, name: "hoc react"},
+    {id: 2, name: "xem youtube"}
+  ])
 
   const AddNewTodo = (name) => {
     alert(`call me ${name}`) //backtick
@@ -28,7 +34,7 @@ const App = () => {
         name = {son}
         age = {age}
         data = {data}
-        
+        todoList={todoList}
       />
       <div className='todo-logo'>
         <img src={Logo} alt="ReactLogo" className='logo'/>
