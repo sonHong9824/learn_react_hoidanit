@@ -7,7 +7,7 @@ const TodoAdd = (props) => {
     const {AddNewTodo} = props
     // AddNewTodo("son")
     const handleClick = () => {
-        console.log(">> ", valueInput)
+        AddNewTodo(valueInput)
 
     }
 
