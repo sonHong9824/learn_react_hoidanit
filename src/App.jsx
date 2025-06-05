@@ -13,14 +13,22 @@ const App = () => {
     job: "student"
   }
 
+  const AddNewTodo = (name) => {
+    alert(`call me ${name}`) //backtick
+  }
+  // AddNewTodo()
+
   return (
     <div className='container'>
       <div className="todo-title">Todo List</div>
-      <TodoNew/>
+      <TodoNew
+        AddNewTodo = {AddNewTodo}
+      />
       <TodoData
         name = {son}
         age = {age}
         data = {data}
+        
       />
       <div className='todo-logo'>
         <img src={Logo} alt="ReactLogo" className='logo'/>
