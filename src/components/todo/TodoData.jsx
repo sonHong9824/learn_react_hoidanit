@@ -8,10 +8,21 @@ const TodoData = (props) => {
 
     return(
         <div className='todo-data'>
-            <div>My name is {age}</div>
-            <div>Learning React</div>
-            <div>Watching React</div>
-            <div>{JSON.stringify(todoList)}</div>
+            {todoList.map((item, index) => {
+                return (
+                    <div key={index} style={{ 
+                        display: "flex", 
+                        justifyContent: "space-between", 
+                        alignItems: "center", 
+                        padding: "8px", 
+                        borderBottom: "1px solid #ccc" 
+                    }}>
+                        <span>{item.name}</span>
+                        <button>Delete</button>
+                    </div>
+                )
+            })}
+
         </div>
     )
 }
