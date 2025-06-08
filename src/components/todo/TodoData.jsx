@@ -2,9 +2,10 @@
 const TodoData = (props) => {
     // console.log(">> props", props)
 
-    const {todoList} = props
+    const {todoList, deleteTodo} = props
 
     console.log(">>>", todoList)
+
 
     return(
         <div className='todo-data'>
@@ -18,7 +19,7 @@ const TodoData = (props) => {
                         borderBottom: "1px solid #ccc" 
                     }}>
                         <span>{item.name}</span>
-                        <button>Delete</button>
+                        <button onClick={() => deleteTodo(item.id)}>Delete</button>
                     </div>
                 )
             })}

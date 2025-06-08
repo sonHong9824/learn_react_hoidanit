@@ -21,11 +21,17 @@ const App = () => {
     name.length > 0 && setTodoList([...todoList, newTodo])
   }
 
+  const deleteTodo = (id) => {
+    const result = todoList.filter((item) => item.id !== id)
+      setTodoList(result)
+  }
+
+
   const randomIntFromInterval = (min, max) => { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  // AddNewTodo()
+
 
   return (
     <div className='container'>
@@ -36,6 +42,7 @@ const App = () => {
 
       {todoList.length > 0 ?
         <TodoData
+          deleteTodo={deleteTodo}
           todoList={todoList}
         />
         :
