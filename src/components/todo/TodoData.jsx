@@ -10,7 +10,7 @@ const TodoData = (props) => {
         <div className='todo-data'>
             {todoList.map((item, index) => {
                 return (
-                    <div key={index} style={{ 
+                    <div key={item.id} style={{ 
                         display: "flex", 
                         justifyContent: "space-between", 
                         alignItems: "center", 
